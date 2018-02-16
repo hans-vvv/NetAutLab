@@ -1,0 +1,8 @@
+---
+- include: playbook1.yml
+- include: playbook2.yml
+- include: playbook3.yml
+- include: playbook4.yml
+- include: playbook5.yml
+
+

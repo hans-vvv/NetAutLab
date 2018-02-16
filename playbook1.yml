@@ -1,0 +1,10 @@
+---
+- name: Reset hosts file ...
+  hosts: all
+  tasks:
+  - name: reset host file
+    shell: cp ./hosts.start ./hosts
+    run_once: true
+    delegate_to: localhost
+
+  - meta: refresh_inventory

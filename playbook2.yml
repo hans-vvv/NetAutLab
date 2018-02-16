@@ -1,0 +1,38 @@
+---
+- name: Build inventory phase 1 ...
+  hosts: all
+  tasks:
+
+  - name: Find IP adresses of elements
+    shell: arp -a | grep 172.16.3.10
+    run_once: true
+    delegate_to: localhost
+    register: ip_result
+
+  - set_fact:
+      found_ip: |
+        {{ip_result.stdout_lines |
+          map('regex_findall', '(\d+\.\d+\.\d+\.\d+)') |
+          map('join') | list }}
+
+  - name: cleanup config directory
+    local_action: file path=./configs state=absent
+    run_once: true
+
+  - name: create config directory
+    local_action: file path=./configs state=directory
+    run_once: true
+
+  - name: Create hostfile phase 1
+    template: src=./templates/hosts-phase1.j2 dest=./configs/hosts-phase1.cfg
+    check_mode: no
+
+  - name: Create hostfile phase 1
+    assemble: 
+      src: ./configs/
+      regexp: hosts-phase1.*
+      dest: ./hosts 
+    delegate_to: localhost
+    run_once: true 
+
+  - meta: refresh_inventory

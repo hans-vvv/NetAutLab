@@ -1,0 +1,33 @@
+- name: Rebuild inventory to final phase...
+  hosts: all
+  tasks:
+
+  - name: load external data model
+    xls_to_facts:
+      src="Map1.xlsx"
+    run_once: true
+
+  - name: Find MAC address of Network elements
+    ios_command:
+      commands: show interface eth0/2 | i Hardware is AmdP2
+    register: mac_result
+
+  - set_fact:
+      found_mac: |
+        {{mac_result.stdout_lines[0] |
+          map('regex_findall','^Hardware is AmdP2, address is ([a-zA-Z0-9]{4}\.[a-zA-Z0-9]{4}\.[a-zA-Z0-9]{4})') |
+          join }}
+
+  - name: Create configuration hostfile phase 2 
+    template: src=./templates/hosts-phase2.j2 dest=./configs/{{inventory_hostname}}-hosts-phase2.cfg
+    check_mode: no
+ 
+  - name: Activate hostfile phase 2
+    assemble: 
+      src: ./configs/
+      regexp: '.*hosts-phase2.*'
+      dest: ./hosts 
+    delegate_to: localhost
+    run_once: true
+
+  - meta: refresh_inventory

@@ -1,0 +1,5 @@
+{% for info in spreadsheet_Router_info %}
+{%  if info.MAC_Add == found_mac[0] %}
+{{info.Hostname}} ansible_host={{ansible_host}}
+{% endif %}
+{% endfor %}

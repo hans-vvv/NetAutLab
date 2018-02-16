@@ -1,0 +1,7 @@
+Router4 ansible_host=172.16.3.105
+
+Router3 ansible_host=172.16.3.100
+Router5 ansible_host=172.16.3.103
+Router2 ansible_host=172.16.3.106
+Router1 ansible_host=172.16.3.104
+Router6 ansible_host=172.16.3.101

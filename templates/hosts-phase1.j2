@@ -1,0 +1,3 @@
+{% for host in found_ip %}
+E{{ loop.index }} ansible_host={{host}}
+{% endfor %}

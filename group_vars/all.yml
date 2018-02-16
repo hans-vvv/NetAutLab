@@ -1,0 +1,3 @@
+---
+ansible_user: cisco
+ansible_ssh_pass: cisco

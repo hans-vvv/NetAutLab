@@ -1,0 +1,16 @@
+- name: Finalize configs ...
+  hosts: all
+  tasks:
+
+  - name: load external data model
+    xls_to_facts:
+      src="Map1.xlsx"
+    run_once: true
+
+  - name: Make final configs 
+    template: src=./templates/final-cfg.j2 dest=./configs/{{inventory_hostname}}-final-cfg.cfg
+    check_mode: no
+
+  - name: Push final configs 
+    ios_config:
+      src: "./configs/{{inventory_hostname}}-final-cfg.cfg"

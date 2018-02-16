@@ -1,0 +1,8 @@
+hostname default
+username cisco privilege 15 password cisco
+ip domain name lab.hans
+line vty 0 4
+transport input all
+login local
+!
+end

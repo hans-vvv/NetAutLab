@@ -1,0 +1,13 @@
+hostname {{inventory_hostname}}
+!
+{% for info in spreadsheet_Router_info %}
+{%  if info.Hostname == inventory_hostname %}
+interface {{info.Prod_intf}}
+no shutdown
+ip address {{info.Prod_IP}} {{info.Prod_subnet}}
+!
+ip route 0.0.0.0 0.0.0.0 {{info.Prod_GW}}
+!
+username {{info.Username}} password {{info.Password}}
+{% endif %}
+{% endfor %}

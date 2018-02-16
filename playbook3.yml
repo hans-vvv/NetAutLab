@@ -1,0 +1,31 @@
+- name: Enable SSH on devices and update SSH know hosts file
+  hosts: all
+  vars:
+    known_hosts: "~/.ssh/known_hosts"
+  tasks:
+
+  - name: Generate SSH keys on devices
+    telnet:
+      user: cisco
+      password: cisco
+      login_prompt: "Username: "
+      prompts:
+      - "[>|#]"
+      command:
+        - terminal length 0
+        - configure terminal
+        - crypto key generate rsa general-keys modulus 1024
+
+  - name: Delete SSH host file on localhost
+    shell: "rm {{known_hosts}}"
+    delegate_to: localhost
+    run_once: true
+
+  - name: Touch SSH host file on localhost
+    shell: "touch {{known_hosts}}"
+    delegate_to: localhost
+    run_once: true
+
+  - name: scan and register
+    shell: "ssh-keyscan {{ansible_host}} >> {{known_hosts}}"
+    delegate_to: localhost 
