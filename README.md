@@ -1,6 +1,6 @@
 
 	Ubuntu VM		    CentOS6
-        Ansible 2.4.2.0	            Cisco IOU
+	Ansible 2.4.2.0	            Cisco IOU
 	ISC DHCP server
 	TFTP server
 	--------		    --------
@@ -13,21 +13,13 @@
 	    |				|
 ---------------------------------------------------- VMware workstation VMnet adapter
 
-Every virtual network element in IOU is connected to a virtual management switch.
-Traffic from 'uplink' of virtual management switch is bridged into VMnet adapter. 
-An Ansible host is connected to this VMnet adapter for connectivity with all virtual elements.
 
-All virtual network elements are IOU router instances, except for the switch, which is an IOU switch instance.
-Each virtual router has a dedicated 'management' interface with connects to the virtual management switch.
-
-######
-######
-
-This lab is used to build a virtual staging area. I assume that with more coding effort this solution 
-can be build into a "real" solution. Also, you could add a step to upgrade the network elements as this
-is not possible in this virtual environment. 
-
-The basic idea is as follows:
+The idea:
+I've build a virtual lab to demonstrate how to stage configurations on network elements using
+ansible and some other tools. In a real world scenario, you need to unpack a new network element,
+log in via console to configure basic connectivity, then connect it to a ftp server to upload ios,
+and then make a config and push it to the device. Wouldn't it be nice if you connect new elements
+to a switch which on turn is connected to an ansible host that will do all the work for you? 
 
 When you buy a new switch, in Cisco case it will be delivered with a MAC address, which is printed 
 on the box and on the switch. This MAC address will be used to identify the switch and thus to put some device specific config
@@ -38,8 +30,16 @@ for this purpose and it is published here:
 
 https://github.com/mamullen13316/ansible_xls_to_facts
 
-######
-######
+The Lab:
+Every virtual network element in IOU is connected to a virtual management switch.
+Traffic from 'uplink' of virtual management switch is bridged into VMnet adapter. 
+An Ansible host is connected to this VMnet adapter for connectivity with all virtual elements.
+All virtual network elements are IOU router instances, except for the switch, which is an IOU switch instance.
+Each virtual router has a dedicated 'management' interface with connects to the virtual management switch.
+
+I assume that with more coding effort this solution can be build into a "real" solution. Also then you could add 
+a step to upgrade the network elements as this is not possible in this virtual environment. 
+
 
 I decided to split up my ansible playbooks. At the end of most playbooks I used a 'workaround' to reset the ansible inventory file. The split helped 
 me also to focus on a particular part of the solution. I will give a short description of each playbook to give an idea what components are used and
