@@ -1,0 +1,1559 @@
+2020-10-09 11:34:27,935 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-09 11:34:28,037 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:02:25,191 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:02:25,213 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 43, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+NameError: name 'netmiko_send_config' is not defined
+
+2020-10-09 13:02:25,213 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 43, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+NameError: name 'netmiko_send_config' is not defined
+
+2020-10-09 13:02:25,214 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:05:15,615 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:05:15,622 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 43, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+NameError: name 'netmiko_send_config' is not defined
+
+2020-10-09 13:05:15,624 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 43, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+NameError: name 'netmiko_send_config' is not defined
+
+2020-10-09 13:05:15,625 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:08:45,418 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:08:45,423 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 44, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+NameError: name 'netmiko_send_config' is not defined
+
+2020-10-09 13:08:45,425 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 44, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+NameError: name 'netmiko_send_config' is not defined
+
+2020-10-09 13:08:45,855 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:11:29,428 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:11:29,454 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.140.201
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.140.201:22
+
+
+
+2020-10-09 13:11:29,455 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.140.200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.140.200:22
+
+
+
+2020-10-09 13:11:29,456 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 45, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 13:11:29,457 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 45, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 13:11:29,962 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:15:10,371 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:15:10,397 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.140.201
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.140.201:22
+
+
+
+2020-10-09 13:15:10,398 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.140.200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.140.200:22
+
+
+
+2020-10-09 13:15:10,399 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 45, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 13:15:10,399 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 45, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 13:15:10,704 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:17:43,697 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:17:43,726 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.140.201
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.140.201:22
+
+
+
+2020-10-09 13:17:43,727 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.140.200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.140.200:22
+
+
+
+2020-10-09 13:17:43,728 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 45, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 13:17:43,730 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 45, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 13:17:44,112 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:19:09,028 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:19:09,049 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.140.201
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.140.201:22
+
+
+
+2020-10-09 13:19:09,050 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 920, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/client.py", line 368, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.140.200
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 942, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.140.200:22
+
+
+
+2020-10-09 13:19:09,051 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 46, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 13:19:09,052 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 46, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 13:19:09,435 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:22:03,363 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:22:06,549 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:26:27,453 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:26:30,974 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:26:44,121 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:26:47,852 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 13:48:29,531 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 13:48:32,479 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 14:02:10,973 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:02:14,706 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 14:03:40,868 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:03:44,106 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 14:04:37,881 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:04:38,331 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 910, in establish_connection
+    self.telnet_login()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco_base_connection.py", line 171, in telnet_login
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Login failed: 192.168.140.200
+
+2020-10-09 14:04:38,332 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 46, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 14:04:40,963 -  nornir.core -     INFO -        run() - Running task 'close_connections_task' with args {} on 2 hosts
+2020-10-09 14:05:23,388 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:06:49,899 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:10:29,373 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:11:31,723 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:13:07,067 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:13:23,255 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:14:17,457 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:20:24,442 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:22:01,138 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:26:26,168 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:28:07,300 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:28:29,544 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:34:26,357 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:35:02,811 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:35:32,275 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:37:27,601 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:41:23,067 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:45:22,387 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:46:09,865 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:46:49,487 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:48:07,311 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:52:07,389 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:54:27,395 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:54:58,845 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 14:58:14,578 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:00:29,608 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:03:22,333 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:12:34,895 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:13:53,510 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:14:22,806 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:15:38,359 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:15:52,017 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:31:18,128 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:31:18,574 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 910, in establish_connection
+    self.telnet_login()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco_base_connection.py", line 171, in telnet_login
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Login failed: 192.168.140.201
+
+2020-10-09 15:31:18,576 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 48, in configure_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-09 15:35:16,415 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:37:55,841 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:40:11,942 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 15:41:55,007 -  nornir.core -     INFO -        run() - Running task 'configure_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:41:11,975 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:41:59,391 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:42:29,617 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:43:58,397 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:44:03,519 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 16:44:25,965 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:44:33,161 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 16:45:17,206 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:45:21,599 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 16:49:16,278 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:49:20,331 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 16:49:20,655 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'gather_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 71, in gather_command
+    mac[task.host.name] = re.search(fmt, output.result.group(1))
+AttributeError: 'str' object has no attribute 'group'
+
+2020-10-09 16:49:20,664 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'gather_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 71, in gather_command
+    mac[task.host.name] = re.search(fmt, output.result.group(1))
+AttributeError: 'str' object has no attribute 'group'
+
+2020-10-09 16:51:03,566 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:51:07,104 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 16:51:07,424 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'gather_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 71, in gather_command
+    m = re.search(fmt, output.result.group(1))
+AttributeError: 'str' object has no attribute 'group'
+
+2020-10-09 16:51:07,472 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'gather_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 71, in gather_command
+    m = re.search(fmt, output.result.group(1))
+AttributeError: 'str' object has no attribute 'group'
+
+2020-10-09 16:51:37,959 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:51:42,965 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 16:52:33,854 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:52:38,245 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 16:54:20,676 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 16:54:25,538 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:02:24,078 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:03:05,459 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:04:20,737 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:04:24,593 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:05:44,402 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:05:48,527 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:07:50,064 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:07:54,269 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:33:51,232 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:33:55,662 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:35:36,164 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:35:41,736 -  nornir.core -     INFO -        run() - Running task 'gather_command' with args {'command': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:48:35,393 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:48:41,722 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:50:45,590 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:50:50,670 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:51:42,777 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:51:46,680 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:53:21,489 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:53:25,497 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:53:58,426 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:54:03,995 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:54:30,920 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:54:36,524 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 17:55:00,855 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 17:55:07,183 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 18:06:02,549 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 18:06:08,231 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 18:06:46,580 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 18:06:51,269 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 18:10:31,196 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 18:15:35,047 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 18:15:39,849 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 18:24:34,598 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 18:24:38,696 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 18:26:28,053 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 18:26:32,865 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-09 18:28:02,293 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-09 18:28:07,224 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 02:17:17,585 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 02:17:18,068 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 910, in establish_connection
+    self.telnet_login()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco_base_connection.py", line 171, in telnet_login
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Login failed: 192.168.140.200
+
+2020-10-10 02:17:18,070 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'gen_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 49, in gen_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 02:17:21,391 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 02:26:16,960 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 02:26:19,937 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 02:27:44,626 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 02:27:47,146 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 02:33:36,197 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 02:33:39,074 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 02:38:11,902 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 02:38:15,205 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 02:44:27,897 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 02:44:30,821 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 02:49:43,462 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 02:49:47,044 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 02:51:41,323 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 02:51:44,217 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 03:00:17,516 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 03:00:26,209 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 03:03:13,306 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 03:03:13,782 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 910, in establish_connection
+    self.telnet_login()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco_base_connection.py", line 171, in telnet_login
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Login failed: 192.168.140.201
+
+2020-10-10 03:03:13,785 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'gen_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 49, in gen_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 03:03:20,179 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 03:04:49,632 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 03:04:56,481 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 03:05:41,814 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 03:05:48,193 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 08:48:50,782 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 08:48:53,574 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 08:49:46,659 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 08:49:48,921 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 08:49:49,242 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'hostname Router1\n!\ninterface Eth0/0\nno shutdown\nip address 10.10.10.1 255.255.255.0\n!\nip route 0.0.0.0 0.0.0.0 255.255.255.0\n!\nusername staging1 password area1'} on 2 hosts
+2020-10-10 08:50:00,602 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 08:50:00,612 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 08:50:00,623 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'hostname Router2\n!\ninterface Eth0/0\nno shutdown\nip address 10.10.10.2 255.255.255.0\n!\nip route 0.0.0.0 0.0.0.0 255.255.255.0\n!\nusername staging2 password area2'} on 2 hosts
+2020-10-10 08:54:56,753 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 08:55:00,906 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 08:55:01,239 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'hostname Router1\n!\ninterface Eth0/0\nno shutdown\nip address 10.10.10.1 255.255.255.0\n!\nip route 0.0.0.0 0.0.0.0 255.255.255.0\n!\nusername staging1 password area1'} on 2 hosts
+2020-10-10 08:55:12,421 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 08:55:12,460 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 08:55:12,474 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'hostname Router2\n!\ninterface Eth0/0\nno shutdown\nip address 10.10.10.2 255.255.255.0\n!\nip route 0.0.0.0 0.0.0.0 255.255.255.0\n!\nusername staging2 password area2'} on 2 hosts
+2020-10-10 09:03:33,309 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:03:38,510 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:03:38,806 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:03:50,198 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 09:03:50,200 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 101, in configure_from_template
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 09:03:50,204 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 09:03:50,205 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 101, in configure_from_template
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 09:07:30,791 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:07:33,031 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:07:33,301 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:07:44,802 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 09:07:44,809 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 102, in configure_from_template
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 09:07:44,830 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 09:07:44,831 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 102, in configure_from_template
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 09:10:57,185 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:11:01,042 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:11:01,331 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:11:12,702 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 09:11:12,704 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 102, in configure_from_template
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 09:11:12,710 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 09:11:12,713 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 102, in configure_from_template
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 09:13:00,652 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:13:02,803 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:13:24,129 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:13:26,299 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:13:26,580 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:13:39,843 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:13:42,003 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:13:42,283 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:14:59,405 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:15:01,534 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:23:00,682 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:23:02,875 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:23:03,152 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:23:03,155 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+TypeError: configure_from_template() takes 0 positional arguments but 1 was given
+
+2020-10-10 09:23:03,156 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+TypeError: configure_from_template() takes 0 positional arguments but 1 was given
+
+2020-10-10 09:23:38,716 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:23:44,020 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:23:44,318 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:23:44,320 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+TypeError: configure_from_template() takes 0 positional arguments but 1 was given
+
+2020-10-10 09:23:44,321 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+TypeError: configure_from_template() takes 0 positional arguments but 1 was given
+
+2020-10-10 09:25:33,936 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:25:41,608 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:25:41,932 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:25:41,935 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 80, in configure_from_template
+    if mac_result[hostitem] == row['MAC_Add']:
+NameError: name 'hostitem' is not defined
+
+2020-10-10 09:25:41,936 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 80, in configure_from_template
+    if mac_result[hostitem] == row['MAC_Add']:
+NameError: name 'hostitem' is not defined
+
+2020-10-10 09:26:31,987 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:26:37,217 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:26:37,476 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:26:37,479 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 80, in configure_from_template
+    if mac_result[hostitem] == row['MAC_Add']:
+NameError: name 'hostitem' is not defined
+
+2020-10-10 09:26:37,480 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 80, in configure_from_template
+    if mac_result[hostitem] == row['MAC_Add']:
+NameError: name 'hostitem' is not defined
+
+2020-10-10 09:27:36,987 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:27:43,069 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:27:43,380 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:27:43,383 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 80, in configure_from_template
+    if mac_result[hostitem] == row['MAC_Add']:
+NameError: name 'hostitem' is not defined
+
+2020-10-10 09:27:43,383 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 80, in configure_from_template
+    if mac_result[hostitem] == row['MAC_Add']:
+NameError: name 'hostitem' is not defined
+
+2020-10-10 09:28:13,156 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:28:18,418 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:28:18,688 -  nornir.core -     INFO -        run() - Running task 'configure_from_template' with args {} on 2 hosts
+2020-10-10 09:28:30,140 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 09:28:30,141 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 102, in configure_from_template
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 09:28:30,142 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1859, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 592, in _read_channel_expect
+    f"Timed-out reading channel, pattern not found in output: {pattern}"
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, pattern not found in output: hostname\ Router1\
+\!\
+interface\ Eth0\/0\
+no\ shutdown\
+ip\ address\ 10\.10\.10\.1\ 255\.255\.255\.0\
+\!\
+ip\ route\ 0\.0\.0\.0\ 0\.0\.0\.0\ 255\.255\.255\.0\
+\!\
+username\ staging1\ password\ area1
+
+2020-10-10 09:28:30,143 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'configure_from_template' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 102, in configure_from_template
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 09:43:18,564 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:43:20,768 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:51:16,084 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:51:18,219 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:52:10,208 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:52:12,554 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:56:55,525 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:56:57,702 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:59:02,961 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:59:05,158 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 09:59:22,031 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 09:59:24,271 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:01:21,958 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 10:01:24,289 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:08:05,980 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 10:08:08,374 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:10:55,417 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 10:10:55,869 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 448, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/inventory.py", line 499, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/ssh_dispatcher.py", line 312, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 346, in __init__
+    self._open()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 351, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 910, in establish_connection
+    self.telnet_login()
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/cisco_base_connection.py", line 171, in telnet_login
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Login failed: 192.168.140.201
+
+2020-10-10 10:10:55,871 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'gen_ssh_keys' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 56, in gen_ssh_keys
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 10:10:57,857 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:24:04,449 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 10:24:06,825 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:28:36,031 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 10:28:38,359 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:33:15,249 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 10:33:17,497 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:57:27,311 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 10:57:29,542 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:59:23,635 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 10:59:26,217 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 10:59:26,553 -  nornir.core -     INFO -        run() - Running task 'push_final_configs' with args {} on 2 hosts
+2020-10-10 11:03:00,097 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 11:03:02,225 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 11:03:02,504 -  nornir.core -     INFO -        run() - Running task 'push_final_configs' with args {} on 2 hosts
+2020-10-10 11:03:02,510 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_jinja2/plugins/tasks/template_file.py", line 42, in template_file
+    text = t.render(host=task.host, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "templates/final-config.j2", line 1, in top-level template code
+    hostname {{hosts}}
+jinja2.exceptions.UndefinedError: 'hosts' is undefined
+
+2020-10-10 11:03:02,511 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'push_final_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 108, in push_final_configs
+    template_file, path="templates", template="final-config.j2"
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2020-10-10 11:03:02,513 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_jinja2/plugins/tasks/template_file.py", line 42, in template_file
+    text = t.render(host=task.host, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "templates/final-config.j2", line 1, in top-level template code
+    hostname {{hosts}}
+jinja2.exceptions.UndefinedError: 'hosts' is undefined
+
+2020-10-10 11:03:02,514 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'push_final_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 108, in push_final_configs
+    template_file, path="templates", template="final-config.j2"
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2020-10-10 11:04:00,373 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 11:04:02,667 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 11:04:03,000 -  nornir.core -     INFO -        run() - Running task 'push_final_configs' with args {} on 2 hosts
+2020-10-10 11:04:03,009 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_jinja2/plugins/tasks/template_file.py", line 42, in template_file
+    text = t.render(host=task.host, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "templates/final-config.j2", line 1, in top-level template code
+    hostname {{hosts.host}}
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'hosts' is undefined
+
+2020-10-10 11:04:03,011 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'push_final_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 108, in push_final_configs
+    template_file, path="templates", template="final-config.j2"
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2020-10-10 11:04:03,013 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_jinja2/plugins/tasks/template_file.py", line 42, in template_file
+    text = t.render(host=task.host, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "templates/final-config.j2", line 1, in top-level template code
+    hostname {{hosts.host}}
+  File "/usr/local/lib/python3.6/dist-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'hosts' is undefined
+
+2020-10-10 11:04:03,014 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'push_final_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 108, in push_final_configs
+    template_file, path="templates", template="final-config.j2"
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2020-10-10 11:07:35,784 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 11:07:38,112 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 11:07:38,428 -  nornir.core -     INFO -        run() - Running task 'push_final_configs' with args {} on 2 hosts
+2020-10-10 11:37:37,344 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 11:37:40,217 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 11:38:18,408 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 11:38:21,195 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 11:38:21,493 -  nornir.core -     INFO -        run() - Running task 'push_final_configs' with args {} on 2 hosts
+2020-10-10 11:38:42,608 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 569, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1868, in send_config_set
+    new_output = self.read_until_pattern(pattern=pattern)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 580, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2020-10-10 11:38:42,610 - nornir.core.task -    ERROR -      start() - Host 'Router1': task 'push_final_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 113, in push_final_configs
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 11:38:42,761 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 569, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.6/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.6/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 27, in netmiko_send_config
+    result = net_connect.send_config_set(config_commands=config_commands, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 1868, in send_config_set
+    new_output = self.read_until_pattern(pattern=pattern)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 646, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/netmiko/base_connection.py", line 580, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2020-10-10 11:38:42,762 - nornir.core.task -    ERROR -      start() - Host 'Router2': task 'push_final_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/nornir-ztp/test.py", line 113, in push_final_configs
+    task.run(netmiko_send_config, config_commands=cfg)
+  File "/usr/local/lib/python3.6/dist-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2020-10-10 12:07:27,828 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 12:07:31,571 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 12:07:31,863 -  nornir.core -     INFO -        run() - Running task 'push_final_configs' with args {} on 2 hosts
+2020-10-10 12:13:44,226 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 12:13:46,646 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 12:13:46,938 -  nornir.core -     INFO -        run() - Running task 'push_final_configs' with args {} on 2 hosts
+2020-10-10 12:16:03,547 -  nornir.core -     INFO -        run() - Running task 'gen_ssh_keys' with args {} on 2 hosts
+2020-10-10 12:16:08,563 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show interface eth0/0 | i Hardware is AmdP2'} on 2 hosts
+2020-10-10 12:16:08,901 -  nornir.core -     INFO -        run() - Running task 'push_final_configs' with args {} on 2 hosts

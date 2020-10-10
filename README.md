@@ -13,6 +13,8 @@
 	    |				|
 ---------------------------------------------------- VMware workstation VMnet adapter
 
+Update October 2020: I made an implementation of the solution using Python and Nornir. See 
+Nornir directory for details.
 
 The idea:
 I've build a virtual lab to demonstrate how to stage configurations on network elements using

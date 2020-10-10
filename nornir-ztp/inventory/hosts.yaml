@@ -1,0 +1,20 @@
+Router1:
+  hostname: 192.168.140.201
+  data:
+    prod_ip: 10.10.10.1
+    prod_mask: 255.255.255.0
+    prod_gw: 10.10.10.254
+    prod_intf: Eth0/1
+    username: staging1
+    password: area1
+    hostname: Router1
+Router2:
+  hostname: 192.168.140.200
+  data:
+    prod_ip: 10.10.10.2
+    prod_mask: 255.255.255.0
+    prod_gw: 10.10.10.254
+    prod_intf: Eth0/1
+    username: staging2
+    password: area2
+    hostname: Router2

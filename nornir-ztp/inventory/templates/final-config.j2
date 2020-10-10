@@ -1,0 +1,12 @@
+hostname {{host['hostname']}}
+!
+interface {{host['prod_intf']}}
+no shutdown
+ip address {{host['prod_ip']}} {{host['prod_mask']}}
+!
+ip route 0.0.0.0 0.0.0.0 {{host['prod_gw']}}
+!
+username {{host['username']}} password {{host['password']}}
+!
+end
+wr mem

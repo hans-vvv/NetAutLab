@@ -1,0 +1,4 @@
+Hostname,MAC_Add,Prod_IP,Prod_subnet,Prod_GW,Prod_intf,Username,Password
+Router1,aabb.cc00.1000,10.10.10.1,255.255.255.0,10.10.10.254,Eth0/1,staging1,area1
+Router2,aabb.cc00.4000,10.10.10.2,255.255.255.0,10.10.10.254,Eth0/1,staging2,area2
+Router3,aabb.cc00.0320,10.10.10.3,255.255.255.0,10.10.10.254,Eth0/1,staging3,area3

@@ -1,0 +1,7 @@
+---
+num_workers: 20
+inventory:
+  options:
+    host_file: /home/nornir-ztp/inventory/hosts.yaml
+    group_file: /home/nornir-ztp/inventory/groups.yaml
+    defaults_file: /home/nornir-ztp/inventory/defaults.yaml
